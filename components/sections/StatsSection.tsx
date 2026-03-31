@@ -50,7 +50,7 @@ export const StatsSection = () => {
           {STATS.map((stat, index) => (
             <div key={index} className="space-y-4">
               <div className="font-serif text-4xl md:text-6xl text-champagne flex items-center justify-center">
-                <span ref={(el) => (countersRef.current[index] = el)}>0</span>
+                <span ref={(el) => { countersRef.current[index] = el; }}>0</span>
                 <span>{stat.suffix}</span>
               </div>
               <p className="font-sans text-[10px] md:text-xs tracking-[0.3em] uppercase opacity-50">
