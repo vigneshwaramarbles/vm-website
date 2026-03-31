@@ -25,6 +25,9 @@ export default function HeritagePage() {
     <div ref={containerRef} className="min-h-screen pt-32 bg-obsidian text-alabaster px-6 md:px-12 lg:px-24 flex flex-col items-center">
       <div className="max-w-4xl w-full heritage-content">
         <span className="font-sans text-xs tracking-[0.4em] uppercase text-champagne mb-8 block">Our Legacy</span>
+        <div className="mb-12 relative h-20 w-64">
+           <Image src="/images/vm/vm-logo.jpg" alt="Vigneshwara Marbles Logo" fill className="object-contain object-left invert" />
+        </div>
         <h1 className="font-serif text-5xl md:text-8xl tracking-tighter mb-12">
           Decades of <br /><span className="italic">Stone Mastery.</span>
         </h1>

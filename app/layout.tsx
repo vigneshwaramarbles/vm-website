@@ -3,7 +3,8 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { SmoothScrollProvider } from '../components/providers/SmoothScrollProvider';
 import { CartDrawer } from '../components/cart/CartDrawer';
-import { Navbar } from '../components/ui/Navbar'; // We will create a simple navbar
+import { Navbar } from '../components/ui/Navbar';
+import { Footer } from '../components/ui/Footer';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-ogg' });
@@ -29,6 +30,7 @@ export default function RootLayout({
           <div className="noise-overlay" />
           <Navbar />
           <main>{children}</main>
+          <Footer />
           <CartDrawer />
         </SmoothScrollProvider>
       </body>

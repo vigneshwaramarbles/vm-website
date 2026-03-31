@@ -11,14 +11,8 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-40 p-6 mix-blend-difference text-alabaster flex justify-between items-center">
-      <Link href="/" className="relative h-12 w-48 cursor-pointer group">
-        <Image 
-          src="/images/vm/vm-logo.jpg" 
-          alt="Vigneshwara Marbles" 
-          fill 
-          className="object-contain brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
-          priority
-        />
+      <Link href="/" className="font-serif text-2xl tracking-tighter cursor-pointer uppercase">
+        Vigneshwara Marbles.
       </Link>
       
       <div className="flex items-center gap-8 font-sans text-xs uppercase tracking-[0.2em]">
