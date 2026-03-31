@@ -11,6 +11,10 @@ const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-ogg' }
 export const metadata: Metadata = {
   title: 'Vigneshwara Marbles | Ultra-Luxury Stone',
   description: 'Forged by time. Curated for you.',
+  icons: {
+    icon: '/images/vm/vm-logo.jpg',
+    apple: '/images/vm/vm-logo.jpg',
+  },
 };
 
 export default function RootLayout({
