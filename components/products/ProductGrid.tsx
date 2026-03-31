@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useCartStore } from '../../lib/store/useCartStore';
@@ -100,11 +101,12 @@ export const ProductGrid = () => {
             }`}
           >
             {/* Image Container with Hover Scale */}
-            <div className="w-full h-full overflow-hidden">
-              <img
+            <div className="relative w-full h-full overflow-hidden">
+              <Image
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-1000 ease-out group-hover:scale-105"
               />
             </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 
 const POSTS = [
   {
@@ -55,10 +56,11 @@ export default function JournalPage() {
       <div className="flex flex-col gap-24">
         {POSTS.map((post, i) => (
           <article key={i} className="journal-post group flex flex-col md:flex-row gap-8 md:gap-16 cursor-pointer">
-            <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden bg-obsidian/5">
-              <img 
+            <div className="relative md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden bg-obsidian/5">
+              <Image 
                 src={post.image} 
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 alt={post.title}
               />
             </div>

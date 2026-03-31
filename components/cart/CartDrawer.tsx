@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import * as Dialog from '@radix-ui/react-dialog';
 import { X, Plus, Minus, Trash2 } from 'lucide-react';
 import { useCartStore } from '../../lib/store/useCartStore';
@@ -33,8 +34,8 @@ export const CartDrawer = () => {
             ) : (
               items.map((item) => (
                 <div key={item.id} className="flex gap-4 border-b border-obsidian/5 pb-6">
-                  <div className="w-24 h-24 bg-gray-200 overflow-hidden shrink-0">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+                  <div className="relative w-24 h-24 bg-gray-200 overflow-hidden shrink-0">
+                    <Image src={item.image} alt={item.name} fill className="object-cover" />
                   </div>
                   <div className="flex-1 flex flex-col justify-between">
                     <div>

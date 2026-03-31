@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import gsap from 'gsap';
 
 export const CinematicHero = () => {
@@ -48,10 +49,12 @@ export const CinematicHero = () => {
       {/* Background Video/Image (Using placeholder color/gradient for prototype if video not present) */}
       <div className="hero-bg absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <img
+        <Image
           src="/images/vm/485163713_632593396403596_1200771540076677241_n.jpg"
           alt="Marble Texture"
-          className="w-full h-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
 

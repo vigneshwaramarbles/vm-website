@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
+import Image from 'next/image';
+
 export default function HeritagePage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -28,10 +30,11 @@ export default function HeritagePage() {
         </h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
-          <div className="aspect-[4/5] overflow-hidden bg-white/10">
-            <img 
+          <div className="relative aspect-[4/5] overflow-hidden bg-white/10">
+            <Image 
               src="/images/vm/485039153_632563609739908_2329041439641468377_n.jpg" 
-              className="w-full h-full object-cover opacity-80"
+              fill
+              className="object-cover opacity-80"
               alt="Historical Quarry"
             />
           </div>
@@ -40,7 +43,7 @@ export default function HeritagePage() {
               Founded on the principles of integrity and excellence, Vigneshwara Marbles has been the cornerstone of architectural luxury for over three generations.
             </p>
             <p className="font-sans text-sm tracking-wide opacity-70 leading-relaxed">
-              Our journey begins in the heart of the world's most renowned quarries. We don't just supply stone; we curate the very foundation of human creativity, bringing the earth's most ancient art into modern spaces.
+              Our journey begins in the heart of the world&apos;s most renowned quarries. We don&apos;t just supply stone; we curate the very foundation of human creativity, bringing the earth&apos;s most ancient art into modern spaces.
             </p>
           </div>
         </div>

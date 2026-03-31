@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Image from 'next/image';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useCartStore } from '../../lib/store/useCartStore';
 
@@ -60,10 +61,11 @@ export default function CollectionPage() {
         {ALL_PRODUCTS.map((product) => (
           <div key={product.id} className="product-item group cursor-pointer">
             <div className="relative aspect-[3/4] overflow-hidden bg-obsidian/5 mb-6">
-              <img 
+              <Image 
                 src={product.image} 
                 alt={product.name} 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-6">
                  <button 
